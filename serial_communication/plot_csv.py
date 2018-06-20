@@ -21,5 +21,6 @@ df_zip = df_zip.set_index('time')
 df_zip.plot()
 plt.grid()
 # 1σ（全体の68%）が収まるようにしてみた
+# でも収まりが良くないので半分の0.5σ
 plt.ylim(mean-0.5*var, mean+0.5*var)
 plt.savefig(savefig)
