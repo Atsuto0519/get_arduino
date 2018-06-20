@@ -16,8 +16,6 @@ df_zip.temperature = df_zip.temperature.convert_objects(convert_numeric=True)
 mean = df_zip['temperature'].mean()
 var = df_zip['temperature'].var(ddof=False)
 
-print(type(df_zip.loc[0, 'time']))
-
 df_zip = df_zip.set_index('time')
 
 df_zip.plot()
@@ -25,3 +23,5 @@ plt.grid()
 # 1σ（全体の68%）が収まるようにしてみた
 plt.ylim(mean-0.5*var, mean+0.5*var)
 plt.savefig(savefig)
+
+print(df_zip)
