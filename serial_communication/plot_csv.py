@@ -23,5 +23,3 @@ plt.grid()
 # 1σ（全体の68%）が収まるようにしてみた
 plt.ylim(mean-0.5*var, mean+0.5*var)
 plt.savefig(savefig)
-
-print(df_zip)
